@@ -6,6 +6,7 @@ public class PutColor : MonoBehaviour
 {
     // Start is called before the first frame update
     public static int ReadyColor = 0;
+    public int color = 0;
 
     public void Color_Put(int color)
     {
@@ -14,6 +15,6 @@ public class PutColor : MonoBehaviour
 
     public void OnMouseDown()
     {
-        Destroy(gameObject);
+        ReadyColor = color;
     }
 }
