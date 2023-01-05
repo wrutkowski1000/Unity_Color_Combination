@@ -6,6 +6,9 @@ public class RowFiller : MonoBehaviour
 {
     public GameObject[] slots;
     public GameObject[] checkSlots;
+
+    public GameObject newRow;
+    public static int numberOfRows = 1;
     int i = 0;
     void Start()
     {
@@ -30,20 +33,21 @@ public class RowFiller : MonoBehaviour
 
         if (Check.ReadyCheck == 1)
         {
-            int j = 0;
-                if (slots[j].GetComponent<SlotColor>().color == ColorCombination.Combination[j])
+            for (int j = 0; j < 4; j++)
+            {
+                if (j < 5 && slots[j].GetComponent<SlotColor>().color == ColorCombination.Combination[j])
                 {
                     checkSlots[j].GetComponent<SpriteRenderer>().color = Color.black;
                 } 
-                else if (slots[j].GetComponent<SlotColor>().color == ColorCombination.Combination[j+1])
+                else if (j < 4 && slots[j].GetComponent<SlotColor>().color == ColorCombination.Combination[j+1])
                 {
                     checkSlots[j].GetComponent<SpriteRenderer>().color = Color.white;
                 }
-                else if (slots[j].GetComponent<SlotColor>().color == ColorCombination.Combination[j + 2])
+                else if (j < 3 && slots[j].GetComponent<SlotColor>().color == ColorCombination.Combination[j + 2])
                 {
                     checkSlots[j].GetComponent<SpriteRenderer>().color = Color.white;
                 }
-                else if (slots[j].GetComponent<SlotColor>().color == ColorCombination.Combination[j + 3])
+                else if (j < 2 && slots[j].GetComponent<SlotColor>().color == ColorCombination.Combination[j + 3])
                 {
                     checkSlots[j].GetComponent<SpriteRenderer>().color = Color.white;
                 }
@@ -51,6 +55,17 @@ public class RowFiller : MonoBehaviour
                 {
                     checkSlots[j].GetComponent<SpriteRenderer>().color = Color.gray;
                 }
+            }
+            numberOfRows++;
+            if (numberOfRows < 10)
+            {
+                Instantiate(newRow, new Vector3(transform.position.x, transform.position.y - 0.95f, transform.position.z), Quaternion.identity, this.GetComponentInParent<Transform>());
+            } else
+            {
+                numberOfRows++;
+            }
+            Check.ReadyCheck = 0;
+            Destroy(this);
         }
     }
 }
