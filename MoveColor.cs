@@ -17,6 +17,8 @@ public class MoveColor : MonoBehaviour
             {
                 selectedObject = targetObject.transform.gameObject;
                 offset = selectedObject.transform.position - mousePosition;
+
+                colorStartingPosition.position = selectedObject.transform.position;
             }
         }
         if (selectedObject)
@@ -25,6 +27,7 @@ public class MoveColor : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0) && selectedObject)
         {
+            selectedObject.transform.position = colorStartingPosition.position;
             selectedObject = null;
         }
     }
