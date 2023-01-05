@@ -12,7 +12,10 @@ public class RowFiller : MonoBehaviour
     int i = 0;
     void Start()
     {
-        
+        for (int k = 0; k < 4; k++)
+        {
+            slots[k].GetComponent<SpriteRenderer>().color = Color.gray;
+        }
     }
 
     // Update is called once per frame
@@ -63,6 +66,10 @@ public class RowFiller : MonoBehaviour
             } else
             {
                 numberOfRows++;
+                if (numberOfRows == 10)
+                {
+                    Check.GameOver = 1;
+                }
             }
             Check.ReadyCheck = 0;
             Destroy(this);

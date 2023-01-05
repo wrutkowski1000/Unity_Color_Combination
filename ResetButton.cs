@@ -1,20 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Check : MonoBehaviour
+public class ResetButton : MonoBehaviour
 {
-    public static int ReadyCheck = 0;
-    public static int GameOver = 0;
+    // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
-    public void OnMouseDown()
+    public void ResetGame()
     {
-        ReadyCheck = 1;
+        SceneManager.LoadScene(1);
     }
 
     // Update is called once per frame
