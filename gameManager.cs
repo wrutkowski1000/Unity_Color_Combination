@@ -2,14 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColorSpawner : MonoBehaviour
+public class gameManager : MonoBehaviour
 {
-    public GameObject Color;
+    // Start is called before the first frame update
     void Start()
     {
         
     }
+    public void ResetGame()
+    {
+        
+    }
 
+    public void PlayGame()
+    {
+
+    }
     // Update is called once per frame
     void Update()
     {

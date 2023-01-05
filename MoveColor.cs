@@ -22,7 +22,7 @@ public class MoveColor : MonoBehaviour
         if (selectedObject)
         {
             selectedObject.transform.position = mousePosition + offset;
-            selectedObject.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+            //selectedObject.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
         }
         if (Input.GetMouseButtonUp(0) && selectedObject)
         {
