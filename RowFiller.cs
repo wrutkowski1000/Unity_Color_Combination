@@ -15,6 +15,7 @@ public class RowFiller : MonoBehaviour
         for (int k = 0; k < 4; k++)
         {
             slots[k].GetComponent<SpriteRenderer>().color = Color.gray;
+            checkSlots[k].GetComponent<SpriteRenderer>().color = Color.gray;
         }
     }
 
