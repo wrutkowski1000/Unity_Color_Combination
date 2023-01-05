@@ -30,6 +30,18 @@ public class SlotColor : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = Color.blue;
         }
+        if (color == 4)
+        {
+            GetComponent<SpriteRenderer>().color = Color.yellow;
+        }
+        if (color == 5)
+        {
+            GetComponent<SpriteRenderer>().color = Color.cyan;
+        }
+        if (color == 6)
+        {
+            GetComponent<SpriteRenderer>().color = Color.magenta;
+        }
     }
 
     /*void OnTriggerStay2D(Collider2D col)

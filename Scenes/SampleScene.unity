@@ -957,6 +957,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7282484432515811806, guid: cdeba9dd1fd2e4546812f3d3d5978d8d, type: 3}
   m_PrefabInstance: {fileID: 7282484432890865679}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1050610433 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 950444614062759502, guid: cdeba9dd1fd2e4546812f3d3d5978d8d, type: 3}
+  m_PrefabInstance: {fileID: 7282484432890865679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1074377272 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7282484432618480254, guid: cdeba9dd1fd2e4546812f3d3d5978d8d, type: 3}
@@ -1035,6 +1040,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1168767762}
   - component: {fileID: 1168767763}
+  - component: {fileID: 1168767765}
+  - component: {fileID: 1168767764}
   m_Layer: 5
   m_Name: Circle
   m_TagString: Untagged
@@ -1112,6 +1119,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1168767764
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168767761}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.50000006
+--- !u!114 &1168767765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168767761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 895762e9ac3cbfd4b84628f3a933a243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1366337226 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7282484431135932035, guid: cdeba9dd1fd2e4546812f3d3d5978d8d, type: 3}
@@ -1254,6 +1289,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571379763}
   m_CullTransparentMesh: 1
+--- !u!1 &1574448364 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9006561348350364331, guid: cdeba9dd1fd2e4546812f3d3d5978d8d, type: 3}
+  m_PrefabInstance: {fileID: 7282484432890865679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1628299486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,6 +1520,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1846243294 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8848582030301816171, guid: cdeba9dd1fd2e4546812f3d3d5978d8d, type: 3}
+  m_PrefabInstance: {fileID: 7282484432890865679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1884013933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 535173019215913837, guid: cdeba9dd1fd2e4546812f3d3d5978d8d, type: 3}
+  m_PrefabInstance: {fileID: 7282484432890865679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2144059262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1703,6 +1753,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4599173380352059028, guid: 2808bae41a6b6144bbe10cac6733bf27, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599173380352059028, guid: 2808bae41a6b6144bbe10cac6733bf27, type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
@@ -1776,6 +1830,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Row
       objectReference: {fileID: 0}
+    - target: {fileID: 7716851121682049282, guid: cdeba9dd1fd2e4546812f3d3d5978d8d, type: 3}
+      propertyPath: checkSlots.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7716851121682049282, guid: cdeba9dd1fd2e4546812f3d3d5978d8d, type: 3}
+      propertyPath: checkSlots.Array.data[0]
+      value: 
+      objectReference: {fileID: 1574448364}
+    - target: {fileID: 7716851121682049282, guid: cdeba9dd1fd2e4546812f3d3d5978d8d, type: 3}
+      propertyPath: checkSlots.Array.data[1]
+      value: 
+      objectReference: {fileID: 1884013933}
+    - target: {fileID: 7716851121682049282, guid: cdeba9dd1fd2e4546812f3d3d5978d8d, type: 3}
+      propertyPath: checkSlots.Array.data[2]
+      value: 
+      objectReference: {fileID: 1050610433}
+    - target: {fileID: 7716851121682049282, guid: cdeba9dd1fd2e4546812f3d3d5978d8d, type: 3}
+      propertyPath: checkSlots.Array.data[3]
+      value: 
+      objectReference: {fileID: 1846243294}
     m_RemovedComponents:
     - {fileID: 654490847992108183, guid: cdeba9dd1fd2e4546812f3d3d5978d8d, type: 3}
     - {fileID: 3956623307011866066, guid: cdeba9dd1fd2e4546812f3d3d5978d8d, type: 3}

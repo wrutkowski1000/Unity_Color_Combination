@@ -5,6 +5,7 @@ using UnityEngine;
 public class RowFiller : MonoBehaviour
 {
     public GameObject[] slots;
+    public GameObject[] checkSlots;
     int i = 0;
     void Start()
     {
@@ -25,6 +26,31 @@ public class RowFiller : MonoBehaviour
             {
                 i++;
             }
+        }
+
+        if (Check.ReadyCheck == 1)
+        {
+            int j = 0;
+                if (slots[j].GetComponent<SlotColor>().color == ColorCombination.Combination[j])
+                {
+                    checkSlots[j].GetComponent<SpriteRenderer>().color = Color.black;
+                } 
+                else if (slots[j].GetComponent<SlotColor>().color == ColorCombination.Combination[j+1])
+                {
+                    checkSlots[j].GetComponent<SpriteRenderer>().color = Color.white;
+                }
+                else if (slots[j].GetComponent<SlotColor>().color == ColorCombination.Combination[j + 2])
+                {
+                    checkSlots[j].GetComponent<SpriteRenderer>().color = Color.white;
+                }
+                else if (slots[j].GetComponent<SlotColor>().color == ColorCombination.Combination[j + 3])
+                {
+                    checkSlots[j].GetComponent<SpriteRenderer>().color = Color.white;
+                }
+                else
+                {
+                    checkSlots[j].GetComponent<SpriteRenderer>().color = Color.gray;
+                }
         }
     }
 }
