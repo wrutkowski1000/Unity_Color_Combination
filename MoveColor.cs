@@ -17,17 +17,15 @@ public class MoveColor : MonoBehaviour
             {
                 selectedObject = targetObject.transform.gameObject;
                 offset = selectedObject.transform.position - mousePosition;
-
-                colorStartingPosition.position = selectedObject.transform.position;
             }
         }
         if (selectedObject)
         {
             selectedObject.transform.position = mousePosition + offset;
+            selectedObject.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
         }
         if (Input.GetMouseButtonUp(0) && selectedObject)
         {
-            selectedObject.transform.position = colorStartingPosition.position;
             selectedObject = null;
         }
     }
